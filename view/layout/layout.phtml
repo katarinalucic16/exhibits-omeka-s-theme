@@ -7,6 +7,12 @@ $this->headTitle($this->setting('installation_title', 'Omeka S'))->setSeparator(
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
 $this->headLink()->appendStylesheet('//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300');
 $this->headLink()->appendStylesheet('//fonts.googleapis.com/css?family=Arvo:400,700');
+$this->headLink()->appendStylesheet('//fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+$this->headLink()->appendStylesheet('//fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+$this->headLink()->appendStylesheet('//fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
+$this->headLink()->appendStylesheet('//fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+$this->headLink()->appendStylesheet('//fonts.googleapis.com/css2?family=Cardo&family=Cormorant+Garamond:wght@300&display=swap');
+$this->headLink()->appendStylesheet('//fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 $this->headLink()->appendStylesheet('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', 'screen', false, ['integrity' => 'sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', 'crossorigin' => 'anonymous']);
 $this->headLink()->appendStylesheet($this->assetUrl('css/custom.css'));
 //$this->headScript()->prependFile($this->assetUrl('js/default.js'));
@@ -66,7 +72,7 @@ $userBar = $this->partial('common/user-bar', ['site' => $site]);
 				</a>
 			<?php else: ?>
 			    <!-- top left Site Title -->
-				<a href="navbar-brand" href="#"><h1><?php echo $title; ?></h1></a>
+				<a class="navbar-brand" href="../"><h1>FICLIT Online Exhibitions</h1></a>
 				
 			<?php endif; ?>
 			</div><!--/navbar-header-->
@@ -74,10 +80,10 @@ $userBar = $this->partial('common/user-bar', ['site' => $site]);
 				<span class="sr-only">Quick Links</span>
 				<ul class="nav navbar-nav">
 					<!--<li><a href="#">Link 1</a></li>
-					<li><a href="#">Link 2</a></li>
-					<li><a href="#">Link 3</a></li>
-					<li><a href="#">Link 4</a></li>-->
-					<li><a href="https://ficlit.unibo.it/it">Ritorna al FICLIT </a></li>
+					<li><a href="#">Link 2</a></li>-->
+					<li><a href="https://ficlit.unibo.it/it">FICLIT</a></li>
+					<li><a href="https://centri.unibo.it/dharc/en">/DH.arc</a></li>
+					<!--<li><a href="#">Online Exhibitions Homepage</a></li>-->
 				</ul>
 			</div><!--/#quicklinks-->
 		</nav><!--/#top-->
@@ -128,8 +134,46 @@ $userBar = $this->partial('common/user-bar', ['site' => $site]);
     </div>
     
         <footer class="container-fluid">
-       
-        </footer>
+			<div class="new-footer">
+				<div class="first-section">
+					<p class="footer-title">Mostra Virtuale FICLIT</p>
+					<p class="footer-text">
+						<a href="https://www.unibo.it/en/university/privacy-policy-and-legal-notes/privacy-policy/personal-data-processing" alt="Privacy policy" target="_black" class="footer-a">Privacy Policy</a>
+					</p>
+					
+					<p class="footer-text">
+						<a href="https://www.unibo.it/en/university/privacy-policy-and-legal-notes/legal-notes" alt="Legal notes" target="_black" class="footer-a">Legal Notes</a>
+					</p>
+				</div>
+				
+				<div class="second-section">
+					<p class="footer-title">/DH.arc - Digital Humanities Advanced Research Centre</p>
+					<span class="footer-text">
+						<a href="https://centri.unibo.it/dharc/enalt=" alt="Dharc website" target="_black" class="link_footer footer-a">About</a>
+					</span>
+					<span class="footer-separator">
+						 - 
+						<span>
+							<span class="footer-text">
+								<a href="https://centri.unibo.it/dharc/en/research/projects-at-dh-arc" alt="Dharc website" target="_black" class="link_footer footer-a">Projects</a>
+							</span>
+							<span class="footer-separator">
+								 - 
+								<span>
+									<span class="footer-text">
+										<a href="https://centri.unibo.it/dharc/en/contacts" alt="Dharc website" target="_black" class="link_footer footer-a">Contacts</a>
+									</span>
+								</span>	
+							</span>
+						</span>				
+					</span>
+				</div>
+			</div>
+
+			<div class="copyright-footer">
+				<p class="copyright-text"> © Copyright (c) 2021 by /DH.arc - Digital Humanities Advanced Research Centre, University of Bologna.</p>
+			</div>
+		</footer>
         <!-- Javascript fies -->
         <?php echo $this->inlineScript()->prependFile($this->assetUrl('js/videofix.js')); ?>
   

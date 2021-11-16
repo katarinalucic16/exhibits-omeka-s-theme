@@ -4,18 +4,19 @@
 
 /*GLOBAL TAGS*/
 html{
-	font-family:"Open Sans", sans-serif;
+	font-family: "Zen Old Mincho", serif;
 	line-height: 1.45;
 	color:#000;
 	font-size:100%;
-	background-color:#fff;
+	background-color:#f6efef;
 }
 
-h1, h2, h3, #type-title{
-	font-family:Arvo, Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+h2, h3, #type-title{
+	font-family: "Cardo", serif;
 }
 h1, .h1{
 	font-size:1.7em;
+	font-family: 'Libre Baskerville', serif;
 }
 
 h2, .h2{
@@ -28,18 +29,20 @@ h3, .h3{
 
 h4, .h4{
 	font-size: 1.2em;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 p {
     font-size: 1em;
 }
 
-a{
+a {
 	color:#337ab7;
 }
 
 a:hover, a:focus {
-	color: #000;
+	color: white;
 }
 
 form{
@@ -49,7 +52,7 @@ form{
 
 .form-control:focus {
 	border-color: #337ab7;
-	box-shadow: inset 0 0 4px 2px #337ab7;
+	box-shadow: inset 0 0 4px 2px #99000b;
 }
 
 /* #skip_links */
@@ -57,11 +60,11 @@ form{
 #skip_links, #skip_links .col-md-12{
 	height: 10px;
 	padding:0;
-	background: #990000;
+	background: #99000b;
 }
 
 .skip_links--link:focus{
-	background:#337ab7;
+	background:#99000b;
 	color:#fff;
 	width:100%;
 	display:block;
@@ -81,48 +84,61 @@ form{
 }
 .navbar-brand{
 	height:initial;
-	color:#000 !important;
+	color:#2d6a9f;
 	position: relative;
-	top:10px;
+	margin-top: -12px;
+	margin-left: 200px;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.navbar {
+	min-height: 90px;
 }
 
 .navbar-nav>li{
-	/*float:left;*/
+	float:left;
 	display:inline-flex;
 }
 
+/*here whole part with the top left title*/
 .navbar-default{
 	background-color:#fff;
-	border:none;
-	margin-bottom:0;
-	
+	border: none;
+	/*border-top: none;
+	border-bottom: none;
+	border-color: #2e6da4;*/
+	/*margin-bottom:0;
+	margin-left: 30px;
+	margin-right: 30px;*/
 }
 
 @media (min-width:768px) {
 	#title-logo{
 		height:130px;
 	}
-	
+	/*Here Mostra virtuale left top*/
 	.navbar-header{
-		margin-top:10px;
-		margin-bottom:10px;
-		margin-left: 25px;
+		/*margin-top:-10px;
+		margin-bottom:15px;
+		margin-left: 25px;*/
 	}
 }
 /* .navbar #quicklinks */
 #quicklinks{
 	text-transform:uppercase;
-	margin-right:3vw;
+	margin-right:5.5vw;
 	line-height:1;
-	font-size:1em;
-	letter-spacing:1px;
+	font-size:1.5em;
+	letter-spacing:0.5px;
 	padding-left:15px;
-	font-style: italic;
+	margin-right: 100px;
+	font-family: 'Crimson Text', serif;
+	/*padding-top: -10px;*/
 }
 
 #quicklinks a{
 	color:#337ab7;
-	font-size: bold;
 	padding:0;
 	margin:10px 0 0 10px;
 }
@@ -170,7 +186,7 @@ header .title a{
 	/*font-size:1.6em;*/
 	text-transform:uppercase;
 	width:100%;
-	font-family:Arvo,Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif;
+	font-family:"Zen Old Mincho", serif;
 	margin:10px;
 	display:block;
 }
@@ -189,14 +205,14 @@ header .title a{
 }
 
 #exhibitiontitle h1{
-	font-size:2em;
+	/*font-size:2em;*/
 	/*padding-right:20px;
 	padding-left:12px;*/
 
 }
 #exhibitiontitle h1>small{
 	display:block;
-	color:#aaa;
+	color:#2d6a9f;
 	font-size:50%;
 }
 
@@ -205,6 +221,9 @@ header .title a{
 	color:#000;
 	padding:30px;
 	padding-bottom:50px;
+	font-weight: 100;
+	overflow-wrap: break-word;
+	display: flow-root;
 }
 
 @media (min-width:768px){
@@ -218,12 +237,14 @@ header .title a{
 @media screen and (min-width: 48em) {
 
 	#base {
-		background-color:#f4f4f4;
+		background-color:#fcf0f0;
 		background-repeat:no-repeat;
-		/*background-image:url("../resources/images/AndrewInglisClark.jpg"), linear-gradient(to right, black, black 60%, rgba(255,255,255,1));*/
-		/*background-position: bottom right;*/
-		background-size: 100% auto;
-		/*min-height: 250px;*/
+		background-position: relative;
+		background-size: 100%;
+		margin-left: 25px;
+		margin-right: 25px;
+		margin-top: -20px;
+		/*Come fare linear gradient???*/
 	}
 	
 	header{
@@ -268,7 +289,7 @@ header .title a{
 }
 
 .menu-toggle, .menu-toggle:hover, .menu-toggle:focus{
-	color:#337ab7;
+	color:#99000b;
 	float:left;
 
 }
@@ -288,18 +309,22 @@ header .title a{
 
 #search .form-control{
 	padding:0px 5px;
-/*	border: 1px solid #337ab7;*/
+	border: 1px solid #337ab7;
 }
 
 #side_navigation{
-	padding:0;
+	padding:0.8em;
 	padding-top:1em;
 	background-color:black;
+	margin-left: -30px;
+	margin-right: 30px;
 }
 
 #side_navigation nav{
-	/*font-size:1.5em;*/
-	font-family:Arvo, Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+	font-size:1.5em;
+	font-family: "Cormorant Garamond", serif;
+	font-weight: bold;
+	letter-spacing: 0.5px;
 /*	border-top:#337ab7 solid 5px;*/
 }
 
@@ -311,11 +336,11 @@ header .title a{
 }
 
 #side_navigation nav li.active{
-	background-color:#337ab7;
+	background-color:#b3000c;
 	border-radius:0;
 	margin-left: -2px;
 	margin-right:-2px;
-	font-size: 25px;
+	/*font-size: 25px;*/
 }
 
 #side_navigation nav li.active>a, 
@@ -358,8 +383,9 @@ header .title a{
 
 #mainnav>.nav>li>a:focus, 
 #mainnav>.nav>li>a:hover{
-	color: #337ab7;
+	color: #fff;
 	background-color:initial;
+	text-decoration: underline;
 }
 
 #mainnav>.nav>li.active>a:focus, 
@@ -411,13 +437,13 @@ header .title a{
 
 .sub-menu>.nav>li>a:focus, 
 .sub-menu>.nav>li>a:hover{
-	background-color:#337ab7;
+	background-color:#99000b;
 }
 
 .sub-menu>.nav-pills>li.active>a,
 .sub-menu>.nav-pills>li.active>a:focus,
 .sub-menu>.nav-pills>li.active>a:hover{
-	background-color:#337ab7;
+	background-color:#99000b;
 }
 /* Social media sharing buttons */
 #sharing-buttons{
@@ -614,13 +640,20 @@ header .title a{
 }
 
 footer{
-	background-color:black;
+	background-color:#3b0002;
 	color:white;
-	padding:6rem;
+	padding:2rem;
 }
 
 .footer--copyright{
 	padding-top: 3rem;
+}
+
+footer .copyright-text{
+	text-align: center;
+	font-style: italic;
+	color: white;
+	padding-top: 25px;
 }
 
 .footer--copyright a{
@@ -632,18 +665,66 @@ footer{
 	text-decoration:underline;
 }
 
+footer .new-footer{
+	/*padding-top: 40px;
+	padding-bottom: 80px;
+	padding-left: 80px;
+	padding-right: 100px;
+	box-sizing: border-box;
+	display: inline-block;
+	margin-left: 30%;
+	margin-right: 30%;*/
+	margin: 0 auto;
+	width: 80%;
+	padding: 30px;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+footer .first-section{
+	vertical-align: top;
+	width: 40%;
+	display: inline-block;
+	text-align: left;
+	box-sizing: border-box;
+}
+
+footer .second-section{
+	vertical-align: top;
+	margin-left: 35px;
+	max-width: 300px;
+	text-align: left;
+	display: inline-block;
+	box-sizing: border-box;
+	/*position: absolute;*/
+	/*padding-left: 100px;*/
+}
+
+footer .footer-title{
+	color:white;
+	font-size: 20px;
+	font-weight: 300;
+	font-family: "Cardo", serif;
+}
+
+footer .footer-text{
+	color:white;
+}
+
 #exhibitions a:hover,
 #exhibitions a:focus{
-	color:#337ab7;
+	color:#99000b;
 	text-decoration:underline;
 }
 
 #page-title h2{
 	margin-bottom:0;
 	margin-top:12px;
-	font-size: 1.7em;
+	font-size: 2em;
 	font-weight:bold;
 	padding-bottom:20px;
+	
 }
 
 #type-title{
@@ -655,11 +736,13 @@ footer{
     line-height: 24px;
     vertical-align: middle;
     text-align: right;
-    font-size:1.2em;
+    font-size:2em;
 }
 
 .property{
-	padding-bottom:20px;
+	padding-bottom:inherit;
+	font-size: 1.3em;
+	clear: left;
 }
 
 .property h4, .property .values{
@@ -669,10 +752,17 @@ footer{
 	line-height:20px;
 }
 
+.h4, .h5, .h6, h4, h5, h6{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 1.1;
+}
+
 @media (min-width: 992px){
 	.property h4, .property .values{
-		padding-right:15px;
-		padding-left:15px;
+		padding-right:30px;
+		padding-left:20px;
+		font-size: 22px;
 	}
 	
 	.property h4{	
@@ -682,11 +772,46 @@ footer{
 	}
 	
 	.property .values{
-		width:75%;
+		width:50%;
 		float:left;
 		margin-top:10px;
 		margin-bottom:10px;
+		padding-left: 25px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-right: 5px;
+		border: solid;
+		border-width: 0.1em;
+		border-color: #d9d9d9;
+		border-radius: 5px;
+		border-spacing: 20px;
 	}
+}
+
+h4 {
+	display: block;
+	margin-block-start: 0.8em;
+	margin-block-end: 0.7em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+} 
+
+div {
+	display: block;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.row {
+	margin-bottom: 20px;
+}
+
+.universal-viewer {
+	margin-top: 20px;
+	margin-bottom: -50px;
 }
 
 .media-list{
